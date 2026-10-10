@@ -1,127 +1,97 @@
-
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Main page */
-html {
-    width: 100%;
-    min-height: 100%;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: gray;
-    width: 100%;
-    min-height: 100vh;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    width: 100%;
+
 }
 
-/* Complete website container */
-.whole-container {
+.whole-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
-    max-width: 1000px;
-    min-height: 100vh;
+    min-width: 1000px;
     height: auto;
     margin: 0 auto;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
-/* Header */
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     background-color: white;
     width: 100%;
-    min-height: 80px;
-    height: auto;
-    padding: 8px 12px;
+    height: 80px;
     flex-shrink: 0;
-    gap: 10px;
 }
 
 .header .header-left {
     display: flex;
     flex-direction: row;
     align-items: center;
-    min-width: 0;
-    padding-left: 8px;
+    padding-left: 20px;
 }
 
 .header-left .logo {
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .logo img {
-    display: block;
     width: 60px;
     height: 60px;
-    object-fit: contain;
 }
 
 .header-left .lorry-logo {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .lorry-logo img {
-    display: block;
     width: 60px;
     height: 60px;
-    object-fit: contain;
 }
 
 .header .header-right {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-right: 8px;
-    min-width: 0;
+    padding-right: 20px;
 }
 
 .header-right .image {
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .captital-letters {
     color: gray;
 }
 
-/* Main content */
 .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
     width: 100%;
-    flex: 1;
 }
 
-/* Title bar */
 .main-container .title-bar {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
     background-color: lightblue;
     width: 100%;
-    min-height: 50px;
-    height: auto;
-    padding: 12px;
+    height: 50px;
+    padding: 18px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Login box */
 .main-container .login-box {
     display: flex;
     flex-direction: column;
@@ -130,27 +100,23 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
     width: 350px;
-    max-width: calc(100% - 30px);
     min-height: 260px;
     height: auto;
-    padding: 0 12px;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .login-box .login-heading {
     font-size: 15px;
-    text-align: center;
     margin-top: 15px;
     margin-bottom: 20px;
     border-bottom: 3px solid red;
     padding-bottom: 15px;
 }
 
-/* Login details */
 .details {
     margin-bottom: 28px;
-    max-width: 100%;
+    
 }
 
 .details label {
@@ -159,18 +125,17 @@ body {
 
 .details input {
     width: 165px;
-    max-width: 100%;
-    height: 30px;
+    height: 23px;
     border-radius: 5px;
     border: 1px solid gray;
-    padding: 5px 10px;
+    padding-left: 10px;
 }
 
-/* Submit button */
 .submit {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
+    
 }
 
 .submit input {
@@ -189,126 +154,28 @@ body {
     color: white;
     border: 1px solid black;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+    cursor: pointer;
 }
 
-/* Links */
 .links {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
     width: 100%;
-    padding: 0 20px 15px;
-    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .links a {
+    
     color: navy;
     text-decoration: underline;
 }
 
-/* Footer */
 .footer {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     background-color: lightblue;
     width: 100%;
-    min-height: 32px;
-    height: auto;
-    padding: 7px;
-    flex-shrink: 0;
-}
-
-/* Mobile screens */
-@media screen and (max-width: 600px) {
-    .whole-container {
-        width: 100%;
-        min-height: 100vh;
-        height: auto;
-    }
-
-    .header {
-        min-height: 70px;
-        padding: 8px;
-        gap: 5px;
-    }
-
-    .header .header-left {
-        padding-left: 0;
-        gap: 5px;
-    }
-
-    .header-left .logo,
-    .header-left .lorry-logo {
-        margin: 0;
-    }
-
-    .logo img,
-    .lorry-logo img {
-        width: 38px;
-        height: 38px;
-    }
-
-    .header .header-right {
-        padding-right: 0;
-        font-size: 12px;
-    }
-
-    .header-right .image {
-        margin-right: 5px;
-    }
-
-    .main-container .title-bar {
-        padding: 12px 8px;
-        font-size: 14px;
-    }
-
-    .main-container .login-box {
-        width: calc(100% - 30px);
-        max-width: 350px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        padding: 0 10px;
-    }
-
-    .login-box .login-heading {
-        font-size: 15px;
-    }
-
-    .details label {
-        font-size: 16px;
-    }
-
-    .details input {
-        width: 165px;
-        max-width: 100%;
-    }
-
-    .links {
-        padding-left: 12px;
-        padding-right: 12px;
-        font-size: 13px;
-    }
-}
-
-/* Very narrow phones */
-@media screen and (max-width: 360px) {
-    .logo img,
-    .lorry-logo img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .header .header-right {
-        font-size: 10px;
-    }
-
-    .header-left .logo {
-        margin-right: 4px;
-    }
-
-    .header-left .lorry-logo {
-        margin-left: 4px;
-    }
+    height: 32px;
+    padding:7px;
 }
